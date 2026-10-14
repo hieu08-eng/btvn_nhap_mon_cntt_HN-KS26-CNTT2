@@ -13,6 +13,7 @@ Lập bảng so sánh hai toán tử về:
 | rủi ro mất dữ liệu | rất  | thấp |
 | ngữ cảnh  | tạo mới báo cáo mỗi ngày | hệ thống chạy lâu dài tích lũy |
 | encoding | mặc định UTF-16 | giống toán tử \> |
+- nếu An gõ nhầm ">" thay vì ">>" sẽ xóa toàn bộ dữ liệu của 30 ngày trước và chỉ còn dữ liệu của ngày An gõ nhầm
 
 ### **Phần 2: Lựa chọn**
 
@@ -23,4 +24,6 @@ giải pháp tốt nhất là dùng add-content và chỉ định UTF-8
 lệnh PS
 
 Get-Content server.log | Select-String "ERROR" | Add-Content daily\_report.txt \-Encoding utf8
-
+lập luận 
+- add-content hoạt động theo cơ chế ghi nối tiếp giúp bảo vệ dữ liệu không bị ghi đè 
+- thêm tham số -encoding UTF-8 giúp báo cáo hiển thị chuẩn tiếng việt trên các trình 
