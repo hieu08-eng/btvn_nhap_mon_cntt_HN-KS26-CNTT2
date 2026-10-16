@@ -1,0 +1,72 @@
+
+PHẦN 1: BÁO CÁO PHÂN TÍCH (I/O)
+Input (Văn bản thô):
+
+Các yêu cầu đề bài về việc hướng dẫn cài đặt cảm biến độ ẩm cho trang trại Lan.
+
+Đoạn code Python thô, danh sách thông số các loại cảm biến và các yêu cầu về định dạng mã lệnh, bảng biểu.
+
+Output (Giao diện render chuyên nghiệp):
+
+Tài liệu có định dạng Markdown rõ ràng.
+
+Các tên biến/câu lệnh ngắn được bọc trong Inline Code (dấu `...`).
+
+Đoạn code Python được đặt trong Code Block có màu sắc cú pháp (```python) để dễ đọc.
+
+Dữ liệu so sánh được tổ chức gọn gàng thành Table.
+
+Kiểm tra thiết bị bằng Task List (- [ ] và - [x]).
+
+Dùng ký tự Escape (\) để hiển thị các ký tự đặc biệt như dấu sao * hoặc thăng # mà không bị hiểu nhầm là lệnh định dạng.
+
+PHẦN 2: SOURCE CODE (NỘI DUNG FILE README.md)
+Markdown
+# Hướng dẫn cài đặt cảm biến độ ẩm cho trang trại Lan
+
+Tài liệu này giúp anh em thiết lập hệ thống tưới nước tự động cho vườn lan bằng cảm biến độ ẩm.
+
+## 1. Chuẩn bị môi trường Terminal
+
+Trước khi chạy code, anh em cần cập nhật hệ thống và cài đặt thư viện bằng cách gõ các lệnh sau vào `Terminal`:
+
+Gõ lệnh \`sudo apt update\` để cập nhật, sau đó gõ \`pip install pyserial\` để cài thư viện.
+
+*Lưu ý:* Nếu trong file cấu hình mà anh em muốn hiển thị ký tự đặc biệt như dấu sao mà không muốn nó bị biến thành chữ in nghiêng, hãy dùng ký tự escape phía trước, ví dụ: \\\*config.
+
+## 2. Đoạn mã Python điều khiển máy bơm
+
+Dưới đây là đoạn code Python mẫu để kiểm tra độ ẩm và bật máy bơm:
+
+\`\`\`python
+import time
+
+def kiem_tra_do_am(do_am_hien_tai):
+    nguong_toi_thieu = 40  # Độ ẩm tối thiểu cho lan
+    if do_am_hien_tai < nguong_toi_thieu:
+        print("Độ ẩm thấp! Đang bật máy bơm...")
+        return True
+    else:
+        print("Độ ẩm ổn định.")
+        return False
+
+while True:
+    do_am = 35  # Giả lập đọc giá trị cảm biến
+    kiem_tra_do_am(do_am)
+    time.sleep(10)
+\`\`\`
+
+## 3. Bảng so sánh các loại cảm biến
+
+| Tiêu chí | Cảm biến loại cũ (Analog) | Cảm biến loại mới (Digital I2C) |
+| :--- | :--- | :--- |
+| **Độ chính xác** | Kém, dễ bị nhiễu | Cao, ổn định hơn |
+| **Độ bền** | Thấp, dễ bị oxy hóa | Cao, chống ăn mòn tốt |
+| **Lắp đặt** | Nhiều dây nối phức tạp | Đơn giản, dễ cắm |
+
+## 4. Task List kiểm tra thiết bị
+
+- [x] Kiểm tra nguồn điện cho bo mạch
+- [x] Cắm cảm biến độ ẩm vào chân GPIO
+- [ ] Chạy thử script Python điều khiển máy bơm
+- [ ] Kiểm tra hệ thống van phun sương
