@@ -19,10 +19,10 @@ Khi nhìn vào đoạn mã Markdown của bạn sinh viên, em thấy có 3 lỗ
 Em đã sửa lại các lỗi trên theo đúng yêu cầu (có ảnh Logo, tiêu đề từ H1 xuống H2, và chữ in đậm đúng quy tắc):
 
 Markdown  
-\# Lợi ích của rau sạch
+# Lợi ích của rau sạch
 
-\#\# Danh sách các loại rau
+## Danh sách các loại rau
 
-\!\[Logo Dự án\](https\://greentech.vn/logo.png)
+![Logo Dự án\](https\://greentech.vn/logo.png)
 
-\*\*Rất quan trọng\*\*  
+**Rất quan trọng**  
