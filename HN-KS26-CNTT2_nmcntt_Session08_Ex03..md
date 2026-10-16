@@ -4,7 +4,7 @@
 
 * Khái niệm Token: AI xử lý văn bản bằng cách cắt nhỏ thành các đoạn mã gọi là token (có thể là một từ, một phần từ hoặc dấu câu).  
 * Vì sao Markdown giúp AI xử lý nhanh và tiết kiệm hơn?  
-  * Ít ký tự thừa: Markdown sử dụng ký tự tối giản (\*\*, \#) thay vì các thẻ mở/đóng rườm rà như HTML (\<strong\>, \<div\>).  
+  * Ít ký tự thừa: Markdown sử dụng ký tự tối giản (**, #) thay vì các thẻ mở/đóng rườm rà như HTML (\<strong\>, \<div\>).  
   * Tiết kiệm chi phí & tăng tốc độ: Lượng token đầu vào giảm từ 30% \- 50%, giúp giảm chi phí API, tăng tốc độ phản hồi (giảm độ trễ cho người nông dân) và tránh việc bị tràn giới hạn bộ nhớ ngữ cảnh (Context Window).
 
 ## Phần 2\. So sánh Markdown vs HTML & Giải pháp
@@ -13,7 +13,7 @@
 
 | Tiêu chí | Markdown | HTML |
 | :---- | :---- | :---- |
-| Cú pháp (Ví dụ in đậm) | \*\*Cây lúa\*\* (11 ký tự) | \<strong\>Cây lúa\</strong\> (23 ký tự) |
+| Cú pháp (Ví dụ in đậm) | **Cây lúa** (11 ký tự) | \<strong\>Cây lúa\</strong\> (23 ký tự) |
 | Số token ước tính | Khoảng 2 tokens | Khoảng 5 – 6 tokens |
 | Độ dễ đọc (Human-readable) | Cao: Gọn gàng, trực quan như văn bản thô. | Thấp: Bị rối mắt bởi các thẻ lệnh HTML. |
 | Hiệu suất của AI | Tối ưu: Tránh nhiễu, AI tập trung vào nội dung tri thức. | Kém hơn: Tốn token cho các thẻ định dạng không cần thiết. |
