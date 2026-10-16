@@ -15,15 +15,15 @@ Dưới đây là phiên bản hoàn chỉnh của bài tập Sự cố tài li�
 ## Phần 2\. Hoàn thiện: Chuyển đổi sang Markdown (.md)
 
 Markdown  
-\# Dự án GreenTech
+# Dự án GreenTech
 
-\*Hệ sinh thái nông nghiệp tự động hóa tối ưu hóa nguồn nước.\*
+*Hệ sinh thái nông nghiệp tự động hóa tối ưu hóa nguồn nước.*
 
-\#\# Tính năng chính  
+## Tính năng chính  
 \- \[x\] Giám sát cảm biến IoT thời gian thực.  
 \- \[x\] Tự động hóa tưới tiêu.
 
-\#\# Thông số kỹ thuật  
+## Thông số kỹ thuật  
 | Thành phần | Model | Chức năng |  
 | :--- | :--- | :--- |  
 | \*\*SoC\*\* | ESP32 | Xử lý trung tâm |  
