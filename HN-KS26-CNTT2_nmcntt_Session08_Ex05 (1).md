@@ -9,14 +9,14 @@
 ## Phần 2\. Triển khai: File README.md
 
 Markdown  
-\# Smart-Farm IoT System
+# Smart-Farm IoT System
 
-\*Hệ thống quản lý và tự động hóa chăm sóc hoa lan thông minh cho trang trại Lan.\*
+*Hệ thống quản lý và tự động hóa chăm sóc hoa lan thông minh cho trang trại Lan.\*
 
-\---
+---
 
-\#\# 1\. Hướng dẫn cài đặt  
-\`\`\`bash  
+## 1\. Hướng dẫn cài đặt  
+``bash  
 sudo apt update && sudo apt upgrade \-y  
 git clone \[https\://github.com/trang-trai-lan/smart-farm-iot.git\](https\://github.com/trang-trai-lan/smart-farm-iot.git)  
 cd smart-farm-iot  
@@ -53,12 +53,12 @@ Khi nhận lệnh tưới cây, CPU thực hiện:
 
 \---
 
-\#\# Phần 3\. Kiểm thử: Xử lý sự cố RAM đầy
+## Phần 3\. Kiểm thử: Xử lý sự cố RAM đầy
 
 Bổ sung mục sau vào cuối file \`README.md\`:
 
-\`\`\`markdown  
-\#\# Lưu ý & Xử lý sự cố (Tràn RAM do Log)  
+```markdown  
+## Lưu ý & Xử lý sự cố (Tràn RAM do Log)  
 Nếu thiết bị gặp sự cố đơ máy do RAM đầy do file nhật ký (log):  
 1\. Tạm ngắt nguồn điện của thiết bị SoC.  
 2\. Kết nối SSH và chạy lệnh dọn dẹp log tạm thời: \`sudo rm \-rf /var/log/smartfarm/\*.log\`.  
