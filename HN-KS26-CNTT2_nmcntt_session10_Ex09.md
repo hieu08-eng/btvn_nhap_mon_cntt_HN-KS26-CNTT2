@@ -12,7 +12,7 @@
 \* **Xử lý Bẫy 2 (Dữ liệu không tồn tại gây lỗi \`\#N/A\`):** Sử dụng hàm \`IFERROR()\` bọc bên ngoài toàn bộ hàm VLOOKUP. Cú pháp: \`IFERROR(VLOOKUP(...), "Chưa cập nhật")\` để khi không tìm thấy mã, ô sẽ hiển thị thông báo thân thiện thay vì báo lỗi.  
 \* **Xử lý Bẫy 3 (Trôi vùng tra cứu khi kéo công thức):** Thêm dấu đô la (\`\$\`) vào trước tên cột và số hàng của vùng tra cứu (ví dụ: \`$A$1:$E$100\`) để cố định tuyệt đối bảng danh mục.
 
-\### 3\. Thiết kế các bước thực hiện trong Excel  
+### 3\. Thiết kế các bước thực hiện trong Excel  
 \* **Bước 1:** Đặt chuột tại ô \*\*D2\*\* (cột Tên Tác Giả của sheet \`DanhSachBaoCao\`).  
 \* **Bước 2:** Xây dựng cấu trúc hàm \`VLOOKUP\` kết hợp với \`TRIM\` để tra cứu cột tên tác giả (cột số 2\) từ sheet \`DanhMucTacGia\`.  
 \* **Bước 3:** Lồng toàn bộ công thức vào trong hàm \`IFERROR\` để trả về chuỗi \`"Chưa cập nhật"\` nếu phát sinh lỗi.  
