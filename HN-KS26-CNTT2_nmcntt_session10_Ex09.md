@@ -7,12 +7,12 @@
 | \*\*Cột E (Phòng trình bày)\*\* | Ô chứa mã tác giả (ví dụ: \`C2\`) | \`'DanhMucTacGia'\!$A$1:$E$100\` | \`4\` |  
 | \*\*Cột F (Thù lao)\*\* | Ô chứa mã tác giả (ví dụ: \`C2\`) | \`'DanhMucTacGia'\!$A$1:$E$100\` | \`5\` |
 
-#\# 2\. Đề xuất giải pháp xử lý bẫy dữ liệu  
+## 2\. Đề xuất giải pháp xử lý bẫy dữ liệu  
 \* **Xử lý Bẫy 1 (Khoảng trắng thừa):** Sử dụng hàm \`TRIM()\` bao bọc giá trị dò tìm (\`TRIM(C2)\`) để tự động cắt bỏ các khoảng trắng vô hình trước khi đem đi so khớp.  
 \* **Xử lý Bẫy 2 (Dữ liệu không tồn tại gây lỗi \`\#N/A\`):** Sử dụng hàm \`IFERROR()\` bọc bên ngoài toàn bộ hàm VLOOKUP. Cú pháp: \`IFERROR(VLOOKUP(...), "Chưa cập nhật")\` để khi không tìm thấy mã, ô sẽ hiển thị thông báo thân thiện thay vì báo lỗi.  
 \* **Xử lý Bẫy 3 (Trôi vùng tra cứu khi kéo công thức):** Thêm dấu đô la (\`\$\`) vào trước tên cột và số hàng của vùng tra cứu (ví dụ: \`$A$1:$E$100\`) để cố định tuyệt đối bảng danh mục.
 
-\#\#\# 3\. Thiết kế các bước thực hiện trong Excel  
+\### 3\. Thiết kế các bước thực hiện trong Excel  
 \* **Bước 1:** Đặt chuột tại ô \*\*D2\*\* (cột Tên Tác Giả của sheet \`DanhSachBaoCao\`).  
 \* **Bước 2:** Xây dựng cấu trúc hàm \`VLOOKUP\` kết hợp với \`TRIM\` để tra cứu cột tên tác giả (cột số 2\) từ sheet \`DanhMucTacGia\`.  
 \* **Bước 3:** Lồng toàn bộ công thức vào trong hàm \`IFERROR\` để trả về chuỗi \`"Chưa cập nhật"\` nếu phát sinh lỗi.  
