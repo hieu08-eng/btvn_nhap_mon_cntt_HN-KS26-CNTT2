@@ -1,3 +1,4 @@
+﻿```
 ## Phần 1 – Hoàn thiện SRS bằng Heading Styles và Auto TOC
 
 ### 1. Cấu trúc phân cấp tiêu đề (3 cấp)
@@ -62,35 +63,50 @@
 * Giả sử cột Tên Sách là cột mới thêm, mã sách nằm ở cột C. Công thức tra cứu từ sheet `DanhMucSach` (cột Mã Sách là cột 1, Tên Sách là cột 2):
   ```excel
   =VLOOKUP(C3, DanhMucSach!$A$2:$C$4, 2, FALSE)
-2. Nguyên nhân lỗi ở dòng Mã Sách S099 (Hàng 8)
-Lỗi trả về: #N/A
 
-Nguyên nhân: Do mã sách S099 hoàn toàn không tồn tại trong bảng tra cứu DanhMucSach (chỉ có từ S001 đến S003). Do tham số cuối cùng đặt là 0 (hoặc FALSE) để tìm kiếm chính xác tuyệt đối, khi không tìm thấy mã khớp, Excel lập tức báo lỗi #N/A (Not Available).
+```
 
-3. Công thức hoàn chỉnh bọc IFERROR
-Để khắc phục lỗi hiển thị xấu xí và thay bằng thông báo thân thiện, em sử dụng hàm IFERROR bọc bên ngoài như sau:
+### 2. Nguyên nhân lỗi ở dòng Mã Sách S099 (Hàng 8)
+
+-   **Lỗi trả về:** `#N/A`
+    
+-   **Nguyên nhân:** Do mã sách `S099` hoàn toàn không tồn tại trong bảng tra cứu `DanhMucSach` (chỉ có từ `S001` đến `S003`). Do tham số cuối cùng đặt là `0` (hoặc `FALSE`) để tìm kiếm chính xác tuyệt đối, khi không tìm thấy mã khớp, Excel lập tức báo lỗi `#N/A` (Not Available).
+    
+
+### 3. Công thức hoàn chỉnh bọc IFERROR
+
+Để khắc phục lỗi hiển thị xấu xí và thay bằng thông báo thân thiện, em sử dụng hàm `IFERROR` bọc bên ngoài như sau:
 
 Excel
+
+```
 =IFERROR(VLOOKUP(C3, DanhMucSach!$A$2:$C$4, 2, FALSE), "Không tìm thấy sách")
-Phần 4 – Slide báo cáo tiến độ
-1. Nội dung Slide báo cáo tiến độ (Áp dụng nguyên lý 1 Slide – 1 Thông điệp)
-Assertion Title (Tiêu đề kết luận):
 
-"Đã chuẩn hóa thành công cơ sở dữ liệu mượn sách và xử lý triệt để 100% mã lỗi phát sinh nhờ hàm IFERROR."
+```
 
-Content Area (Con số / Kết luận nổi bật):
+## Phần 4 – Slide báo cáo tiến độ
 
-Tổng số bản ghi xử lý: 4 sinh viên mượn sách.
+### 1. Nội dung Slide báo cáo tiến độ (Áp dụng nguyên lý 1 Slide – 1 Thông điệp)
 
-Tỷ lệ lỗi dữ liệu đã khắc phục: 1 mã ngoài danh mục (S099) được kiểm soát an toàn bằng thông báo "Không tìm thấy sách".
+-   **Assertion Title (Tiêu đề kết luận):**
+    
+    _"Đã chuẩn hóa thành công cơ sở dữ liệu mượn sách và xử lý triệt để 100% mã lỗi phát sinh nhờ hàm IFERROR."_
+    
+-   **Content Area (Con số / Kết luận nổi bật):**
+    
+    -   **Tổng số bản ghi xử lý:** 4 sinh viên mượn sách.
+        
+    -   **Tỷ lệ lỗi dữ liệu đã khắc phục:** 1 mã ngoài danh mục (`S099`) được kiểm soát an toàn bằng thông báo _"Không tìm thấy sách"_.
+        
+-   **Loại biểu đồ lựa chọn & Lý do:**
+    
+    -   **Loại biểu đồ:** **Donut Chart (Biểu đồ vành khuyên)** hoặc **Bar Chart (Biểu đồ cột)**.
+        
+    -   **Lý do chọn:** Dùng để phân loại tỷ lệ sách theo các trạng thái (_Đang mượn, Quá hạn, Đã trả_). Biểu đồ giúp người xem (giảng viên/nhà đầu tư) nhìn nhận trực quan ngay lập tức tình trạng mượn sách của tháng chỉ trong vòng chưa đầy 3 giây mà không cần phải dò từng dòng số liệu.
+        
 
-Loại biểu đồ lựa chọn & Lý do:
+### 2. Áp dụng Rule 10/20/30
 
-Loại biểu đồ: Donut Chart (Biểu đồ vành khuyên) hoặc Bar Chart (Biểu đồ cột).
-
-Lý do chọn: Dùng để phân loại tỷ lệ sách theo các trạng thái (Đang mượn, Quá hạn, Đã trả). Biểu đồ giúp người xem (giảng viên/nhà đầu tư) nhìn nhận trực quan ngay lập tức tình trạng mượn sách của tháng chỉ trong vòng chưa đầy 3 giây mà không cần phải dò từng dòng số liệu.
-
-2. Áp dụng Rule 10/20/30
-Quy tắc 10 slide: Slide báo cáo kết quả này là slide số 3 trong tổng số 10 slide của toàn bộ bài thuyết trình đồ án.
-
-Quy tắc 20 phút: Tổng thời gian thuyết trình toàn bộ bài là 20 phút, và riêng slide tổng kết kỹ thuật này sẽ được trình bày gọn gàng trong vòng 2 phút.
+-   **Quy tắc 10 slide:** Slide báo cáo kết quả này là **slide số 3** trong tổng số **10 slide** của toàn bộ bài thuyết trình đồ án.
+    
+-   **Quy tắc 20 phút:** Tổng thời gian thuyết trình toàn bộ bài là 20 phút, và riêng slide tổng kết kỹ thuật này sẽ được trình bày gọn gàng trong vòng **2 phút**.
