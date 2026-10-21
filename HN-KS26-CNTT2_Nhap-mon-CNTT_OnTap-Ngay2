@@ -1,0 +1,55 @@
+Bài 1. Lọc log thủ công
+Câu lệnh sử dụng:
+
+PowerShell
+Get-Content logs/access.log | Select-String "ERROR" > logs/error_report.txt
+Get-Content logs/error_report.txt
+Mẫu kết quả 2 dòng đầu:
+
+Plaintext
+2025-10-18 08:17:59 [ERROR] Khong tim thay trang /lich-thi (404)
+2025-10-18 08:25:12 [ERROR] Loi ket noi co so du lieu (500)
+Bài 2. Đếm bằng pipeline
+Câu lệnh thực hiện:
+
+PowerShell
+(Get-Content logs/access.log | Select-String "WARNING").Count
+(Get-Content logs/payment.log | Select-String "ERROR").Count
+Kết quả:
+
+Số dòng WARNING (access.log): 3
+
+Số dòng ERROR (payment.log): 2
+
+Bài 3. Hoàn thiện script có khung sẵn
+Nội dung file auto_warning.ps1 sau khi hoàn tất:
+
+PowerShell
+# Script: auto_warning.ps1
+# Tac gia: Tran Van Nam
+# Ngay tao: 2026-10-21
+
+Write-Host "Dang loc canh bao thanh toan..."
+
+"=== CANH BAO THANH TOAN ===" > logs/warning_report.txt
+Get-Content logs/payment.log | Select-String "WARNING" >> logs/warning_report.txt
+
+Write-Host "Hoan thanh!"
+Lệnh chạy:
+
+PowerShell
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+./auto_warning.ps1
+Bài 4. Báo cáo tổng hợp
+Câu lệnh chạy trên PowerShell:
+
+PowerShell
+"=== TONG HOP ACCESS LOG ===" > logs/tong_hop_ngay2.txt
+Get-Content logs/access.log | Select-String "ERROR" >> logs/tong_hop_ngay2.txt
+(Get-Content logs/payment.log | Select-String "WARNING").Count >> logs/tong_hop_ngay2.txt
+Bài 5. Câu hỏi ngắn
+a) > tạo mới hoặc ghi đè toàn bộ nội dung file (mất dữ liệu cũ), còn >> nối thêm nội dung mới vào phía cuối file mà giữ lại dữ liệu cũ.
+
+b) Tiêu đề dòng đầu sẽ bị mất do bị ghi đè, file lúc này chỉ còn lại kết quả từ lệnh lọc ERROR thứ hai.
+
+c) Giúp code linh hoạt hơn, dễ dàng chạy trên mọi thiết bị hay thư mục bất kỳ mà không bị phụ thuộc vào cây thư mục cố định của từng máy.
