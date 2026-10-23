@@ -31,12 +31,12 @@ pause
 Markdown  
 \# Quản lý Hạ tầng GreenTech \- Đồ án Nhập môn CNTT
 
-\#\# Cách chạy chương trình tự động lọc lỗi:  
+## Cách chạy chương trình tự động lọc lỗi:  
 1\. Mở thư mục \`scripts\`.  
 2\. Chạy file \`auto\_report.bat\`.  
 3\. Kiểm tra kết quả trong thư mục \`backup/bao-cao-su-co.txt\`.
 
-\#\# Danh sách thiết bị cơ bản:  
+## Danh sách thiết bị cơ bản:  
 \- Cảm biến IoT 01 (RAM 4GB, SSD 128GB)  
 \- Cảm biến IoT 02 (RAM 8GB, SSD 256GB)
 
@@ -45,7 +45,7 @@ Markdown
 Ở bảng quản lý trạng thái trạm, để tự động điền tên thiết bị từ mã linh kiện, bạn dùng công thức cơ bản sau tại ô cần điền:
 
 Excel  
-\=VLOOKUP(A2, 'danh-muc-linh-kien'\!A:D, 2, FALSE)
+=VLOOKUP(A2, 'danh-muc-linh-kien'\!A:D, 2, FALSE)
 
 * A2: Mã linh kiện cần tra cứu.  
 * danh-muc-linh-kien\!A:D: Bảng danh mục linh kiện gốc.  
