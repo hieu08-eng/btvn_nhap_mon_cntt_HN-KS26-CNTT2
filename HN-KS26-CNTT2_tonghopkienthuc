@@ -1,0 +1,98 @@
+1. Các lệnh Terminal cơ bản và nâng cao (PowerShell / Bash)
+Điều hướng & Quản lý thư mục:
+
+pwd / Get-Location: Hiển thị đường dẫn thư mục hiện tại.
+
+ls / Get-ChildItem: Liệt kê danh sách file và thư mục con.
+
+cd <đường_dẫn> / Set-Location: Di chuyển đến thư mục khác.
+
+mkdir <tên_thư_mục>: Tạo thư mục mới.
+
+Quản lý file:
+
+cat <tên_file> / Get-Content: Xem nhanh nội dung file text.
+
+cp <nguồn> <đích> / Copy-Item: Sao chép file/thư mục.
+
+mv <nguồn> <đích> / Move-Item: Di chuyển hoặc đổi tên file.
+
+rm <tên_file> / Remove-Item: Xóa file hoặc thư mục.
+
+Thao tác nâng cao:
+
+Sử dụng phím Tab để tự động hoàn thành tên lệnh/đường dẫn (Auto-complete).
+
+Dùng các toán tử chuyển hướng đầu ra như > (ghi đè) và >> (ghi nối tiếp) để lưu kết quả lệnh ra file.
+
+2. Các định dạng trong Markdown (.md)
+Tiêu đề (Headings): Dùng dấu # từ 1 đến 6 (Ví dụ: # Tiêu đề 1, ## Tiêu đề 2).
+
+Định dạng chữ:
+
+In đậm: **văn bản** hoặc __văn bản__
+
+In nghiêng: *văn bản* hoặc _văn bản_
+
+Gạch ngang: ~~văn bản~~
+
+Danh sách:
+
+Không thứ tự: Dùng dấu -, *, hoặc +.
+
+Có thứ tự: Dùng số kèm dấu chấm (VD: 1. , 2. ).
+
+Liên kết và Hình ảnh:
+
+Link: [Tên hiển thị](URL)
+
+Hình ảnh: ![Mô tả ảnh](đường_dẫn_ảnh)
+
+Trích dẫn và Mã nguồn:
+
+Trích dẫn: Dùng dấu > ở đầu dòng.
+
+Đoạn mã (Code block): Dùng cặp dấu ba dấu huyền xung quanh (```).
+
+3. Microsoft Word cơ bản
+Tạo Heading (Kiểu tiêu đề): Sử dụng các mức Heading 1, Heading 2,... trên tab Home để định cấu trúc tài liệu. Việc này giúp văn bản mạch lạc và tạo nền tảng để làm mục lục tự động.
+
+Đánh số trang: Vào tab Insert -> Chọn Page Number -> Chọn vị trí hiển thị (trên đầu hoặc dưới chân trang). Có thể tùy chỉnh không đánh số ở trang bìa.
+
+Tạo mục lục tự động: Vào tab References -> Chọn Table of Contents -> Chọn mẫu mục lục có sẵn. Mục lục sẽ tự động cập nhật dựa trên các Heading đã tạo.
+
+Tạo danh sách: Dùng tính năng Bullet (danh sách không thứ tự) hoặc Numbering (danh sách có thứ tự) trên tab Home để trình bày ý rõ ràng, tránh đoạn văn quá dài.
+
+4. Microsoft Excel: Thực hành hàm VLOOKUP
+Hàm VLOOKUP dùng để tìm kiếm giá trị theo cột dọc và trả về giá trị tương ứng ở cột khác trên cùng một hàng.
+
+Cú pháp:=VLOOKUP(Lookup_value, Table_array, Col_index_num, [Range_lookup])
+
+Giải thích các thành phần:
+
+Lookup_value: Giá trị cần đem đi tìm kiếm (ví dụ: Mã sản phẩm).
+
+Table_array: Vùng bảng chứa dữ liệu cần tra cứu (lưu ý nên nhấn F4 để khóa địa chỉ ô dạng cố định $ như $A$1:$D$10).
+
+Col_index_num: Số thứ tự của cột (tính từ trái sang phải trong vùng bảng) chứa kết quả bạn muốn lấy.
+
+Range_lookup: Kiểu tìm kiếm.
+
+0 hoặc FALSE: Tìm chính xác tuyệt đối (thường dùng nhất).
+
+1 hoặc TRUE: Tìm tương đối.
+
+Mẹo: Kết hợp thêm AutoFilter để lọc nhanh dữ liệu và công cụ VLOOKUP để đối chiếu dữ liệu giữa các bảng tính khác nhau.
+
+5. Quy chuẩn khi làm việc với PowerPoint (PPT)
+Quy tắc 6x6: Giới hạn tối đa khoảng 6 dòng chữ trên một slide và mỗi dòng không quá 6 từ (tránh viết đoạn văn dài dằng dặc).
+
+Bố cục trực quan: Sử dụng biểu đồ, hình khối (shapes), hoặc SmartArt để thay thế cho văn bản thuần túy khi có thể.
+
+Màu sắc và Font chữ:
+
+Sử dụng tối đa 2–3 màu chủ đạo, có độ tương phản cao giữa chữ và nền (chữ sáng nền tối, hoặc chữ tối nền sáng).
+
+Chọn các font chữ thông dụng, dễ đọc (như Arial, Calibri, Segoe UI, Roboto) và giữ nhất quán kích thước font xuyên suốt bài thuyết trình.
+
+Hiệu ứng (Animation & Transition): Tiết chế hiệu ứng chuyển động, chỉ dùng khi thực sự cần thiết để dẫn dắt người xem, tránh dùng quá nhiều hiệu ứng rườm rà gây mất tập trung.
