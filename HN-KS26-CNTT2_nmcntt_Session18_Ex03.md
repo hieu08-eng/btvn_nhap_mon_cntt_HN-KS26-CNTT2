@@ -1,10 +1,4 @@
-﻿# BÀI TẬP VỀ NHÀ: KHẮC PHỤC SỰ CỐ RÒ RỈ THÔNG TIN ĐĂNG NHẬP (INFOSTEALER)
-- **Họ và tên:** Đặng Đình Hiếu
-- **Mã sinh viên:** B26DTCN078
-- **Lớp / Khóa:** IT108-K26 (Rikkei Education)
-- **Môn học:** Nhập Môn Công Nghệ Thông Tin - Buổi 19
-
----
+﻿
 
 ## 1. Báo cáo phân tích (Mô hình IPO)
 
